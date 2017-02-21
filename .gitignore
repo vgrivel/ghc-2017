@@ -1,0 +1,11 @@
+target
+uidSet
+company.xml
+output.xml
+res2.xml
+*.iml
+.idea
+*.jar
+*.avro
+build
+*.out
