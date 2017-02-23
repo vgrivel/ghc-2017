@@ -1,54 +1,68 @@
 package ch.daplab.google.input;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by vincent on 2/11/16.
  */
 public class Container {
-    private Grid grid;
-    private List<Order> orderList;
-    private List<Warehouse> warehouseList;
-    private List<Product> productList;
-    private List<Drone> droneList;
+    private List<Request> requestList;
+    private List<Endpoints> endpointsList;
 
-    public Grid getGrid() {
-        return grid;
+    public int getCachSize() {
+        return cachSize;
     }
 
-    public void setGrid(Grid grid) {
-        this.grid = grid;
+    public void setCachSize(int cachSize) {
+        this.cachSize = cachSize;
     }
 
-    public List<Order> getOrderList() {
-        return orderList;
+    private int cachSize;
+    public int getMaxLentencyforEndpoints() {
+        return maxLentencyforEndpoints;
     }
 
-    public void setOrderList(List<Order> orderList) {
-        this.orderList = orderList;
+    public void setMaxLentencyforEndpoints(int maxLentencyforEndpoints) {
+        this.maxLentencyforEndpoints = maxLentencyforEndpoints;
     }
 
-    public List<Warehouse> getWarehouseList() {
-        return warehouseList;
+    private int maxLentencyforEndpoints;
+    public List<Cache> getCacheList() {
+        return cacheList;
     }
 
-    public void setWarehouseList(List<Warehouse> warehouseList) {
-        this.warehouseList = warehouseList;
+    public void setCacheList(List<Cache> cacheList) {
+        this.cacheList = cacheList;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    private List<Cache> cacheList;
+
+    public List<Request> getRequestList() {
+        return requestList;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setRequestList(List<Request> requestList) {
+        this.requestList = requestList;
     }
 
-    public List<Drone> getDroneList() {
-        return grid.getDroneList();
+    public List<Endpoints> getEndpointsList() {
+        return endpointsList;
     }
 
-    public void setDroneList(List<Drone> droneList) {
-        this.droneList = droneList;
+    public void setEndpointsList(List<Endpoints> endpointsList) {
+        this.endpointsList = endpointsList;
     }
+
+    public List<Video> getVideoList() {
+        return videoList;
+    }
+
+    public void setVideoList(List<Video> videoList) {
+        this.videoList = videoList;
+    }
+
+    private List<Video> videoList;
+
+
 }

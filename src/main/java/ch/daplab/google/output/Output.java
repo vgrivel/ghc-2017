@@ -1,6 +1,6 @@
 package ch.daplab.google.output;
 
-import ch.daplab.google.dorwi.commands.Command;
+import ch.daplab.google.input.Cache;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -12,18 +12,18 @@ import java.util.List;
  */
 public class Output {
     String fileName;
-    List<Command> commands;
+    List<Cache> cacheList;
 
-    public Output(String fileName, List<Command> commands) {
+    public Output(String fileName, List<Cache> cacheList) {
         this.fileName = fileName;
-        this.commands = commands;
+        this.cacheList = cacheList;
     }
 
     public void write() throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter(fileName, "UTF-8");
-        writer.println(commands.size());
-        for (Command command: commands){
-            writer.println(command.toString());
+        writer.println(cacheList.size());
+        for (Cache cache: cacheList){
+            writer.println(cache.toString());
         }
         writer.close();
     }
